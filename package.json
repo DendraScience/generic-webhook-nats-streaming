@@ -1,0 +1,45 @@
+{
+  "name": "@dendra-science/generic-webhook-nats-streaming",
+  "version": "0.0.1",
+  "description": "Generic Webhook to NATS Streaming command line interface tool.",
+  "license": "BSD-2-Clause-FreeBSD",
+  "author": "J. Scott Smith <scott@newleafsolutionsinc.com>",
+  "bin": {
+    "generic-webhook-nats-streaming": "./dist/generic-webhook-nats-streaming.js"
+  },
+  "main": "dist/generic-webhook-nats-streaming.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DendraScience/generic-webhook-nats-streaming.git"
+  },
+  "scripts": {
+    "babel": "babel src -d dist",
+    "build": "npm run lint && npm run clean && npm run babel && npm run chmod",
+    "chmod": "chmod +x dist/generic-webhook-nats-streaming.js",
+    "clean": "rm -rf dist/*",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=12.14.x"
+  },
+  "dependencies": {
+    "fastify": "^3.10.1",
+    "mri": "^1.1.1",
+    "node-nats-streaming": "^0.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "prettier": "^2.2.1"
+  }
+}
