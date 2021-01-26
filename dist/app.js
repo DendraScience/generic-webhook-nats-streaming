@@ -93,7 +93,7 @@ module.exports = async log => {
         guid
       };
     });
-    const address = await fastify.listen(p.port);
+    const address = await fastify.listen(p.port, p.host);
     log.info(`Webhook listening on ${address}`);
     app.fastify = fastify;
   };

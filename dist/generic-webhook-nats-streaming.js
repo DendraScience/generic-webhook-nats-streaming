@@ -40,6 +40,7 @@ require('./app')(log).then(app => {
       task_seconds: 'task-seconds'
     },
     default: {
+      host: 'localhost',
       port: 3000,
       stan_client: os.hostname(),
       stan_cluster: 'test-cluster',
